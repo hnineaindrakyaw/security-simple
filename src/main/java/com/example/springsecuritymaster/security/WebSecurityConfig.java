@@ -64,7 +64,7 @@ public class WebSecurityConfig {
 
         http.authorizeRequests()
                 .expressionHandler(expressionHandler())
-                .mvcMatchers("/","/home","/customers","/create-customer").permitAll()
+                .mvcMatchers("/","/home").permitAll()
 
                 .mvcMatchers("/bootstrap/**").permitAll()
                 .mvcMatchers("/customers").hasRole(CUSTOMERS_PAGE_VIEW)
